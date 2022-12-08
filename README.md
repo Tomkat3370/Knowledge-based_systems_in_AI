@@ -1,4 +1,5 @@
-![image](https://user-images.githubusercontent.com/72070856/206197553-af2fe7f7-c471-4338-a2cc-64549e5f5d42.png)      School of Creative and Digital Industries 
+![image](https://user-images.githubusercontent.com/72070856/206197553-af2fe7f7-c471-4338-a2cc-64549e5f5d42.png)                                                              
+                                                                                                                     School of Creative and Digital Industries 
                                                                                                                      Knowledge-Based Systems in Artificial Intelligence 
                                                                                                                      Coursework 1 Part A:                               
                                                                                                                      Academic Year 2022 to 2023                                                                                                                                             
