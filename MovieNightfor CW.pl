@@ -6,19 +6,15 @@ elem(X,[_|Tail]) :- elem(X,Tail).
 elems(X,[Y|_]) :- elem(Y,X).
 elems(X,[_|Tail]) :- elems(X,Tail).
 
-list_music(Composer,Lyrisist,Artist,Categories,Min,Max,Stream,Genre, L) :-
-    list_music(Composer,Lyrisist,Artist,Categories,Min,Max,Stream,Genre, [], L).
-
-list_music(Composer,Lyrisist,Artist,Categories,Min,Max,Stream,Genre, Acc, L) :-
-    music(Title,Composer,Lyrisist,Artist,Category,Length,Streamings,Genre),
+list_music(Composer,Lyrisist,Artist,Categorix,Stream,Genre, L) :-
+    list_music(Composer,Lyrisist,Artist,Cateorix,Stream,Genre, [], L).
+list_music(Composer,Lyrisist,Artist,Categories,Stream,Genre, Acc, L) :-
+    music(Title,Composer,Lyrisist,Artist,Category,Streamings,Genre),
     elems(Genre,Genre),
     elem(Stream,Streamings),
     elem(Category,Categories),
-    Length > Min-1,
-    Length < Max+1,
     \+ elem(Title, Acc), !,
-    list_music(Composer,Lyrisist,Artist,Categories,Min,Max,Stream,Genre,[Title|Acc], L).
-
+    list_music(Composer,Lyrisist,Artist,Categorix,Stream,Genre,[Title|Acc], L).
 list_music(_,_,_,_,_,_, L, L).
 
 %Suggest music to an user
@@ -42,12 +38,10 @@ suggest_music(M) :-
     write('Choose your streaming platform: \n   netflix   hbogo   prime   disney:\n'),
     read(Stream),
     write('Type minimum length of film in minutes: '),
-    read(Min),
-    write('Type maximum length of film in minutes: '),
-    read(Max),
+    re    write('Type maximum length of film in minutes: '),
+    red(Max),
     get_genre(Mood,Genre),
-    list_music(Composer,Lyrisist,Artist,Categories,Min,Max,Stream,Genre,M).
-
+    list_music(Composer,Lyrisist,Artist,Categorix,Stream,Genre,M).
 
 %Get categories from user's age
 get_category(Age,X) :- Age < 7, X = [g].
